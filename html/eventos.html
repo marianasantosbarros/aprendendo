@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Eventos</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style type="text/css">
+        body {
+            width: 100%;
+        }
+
+        .laranjaBg {
+            background-color: orange;
+        }
+
+        .vermelhoBg {
+            background-color: red;
+        }
+
+        .amareloBg {
+            background-color: yellow;
+        }
+
+        .verdeBg {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <form method="get" id="meu_formulario">
+        <div class="field">
+            <label>
+                Altere a cor do background:
+                <select name="background_color" id="background_color">
+                    <option value="">--resetar--</option>
+                    <option value="laranja">Laranja</option>
+                    <option value="vermelho">Vermelho</option>
+                    <option value="amarelo">Amarelo</option>
+                    <option value="verde">Verde</option>
+                    <option value="azul">Azul</option>
+                </select>
+            </label>
+        </div>
+
+        <div class="field">
+            <label>
+                Qual o seu nome?
+                <input name="nome" type="text" />
+            </label>
+        </div>
+
+        <div class="field">
+            <label>
+                Qual o seu telefone?
+                <input name="telefone" type="number" />
+            </label>
+        </div>
+
+        <div class="field">
+            Qual o seu sexo?
+            <label>
+                <input name="sexo" type="radio" value="masculino" /> Masculino
+            </label>
+
+            <input name="sexo" type="radio" value="feminino" id="sexo_feminino" />
+            <label for="sexo_feminino">Feminino</label>
+        </div>
+
+        <div class="field">
+            <label>
+                Escreve algo sobre você:
+                <textarea rows="4" cols="40" name="sobre">asda</textarea>
+            </label>
+        </div>
+
+        <div class="field">
+            <input name="ativar_css" id="ativar_css" type="checkbox" />
+            <label for="ativar_css">Ativar CSS?</label>
+        </div>
+
+        <div class="field">
+            <button type="submit">Enviar</button>
+        </div>
+    </form>
+
+    <script type="text/javascript">
+        const backgroundColors = {
+            laranja: 'orange',
+            vermelho: 'red',
+            amarelo: 'yellow',
+            verde: 'green',
+        };
+
+        const elementBackgroundColor = document.querySelector('#background_color');
+
+        elementBackgroundColor.addEventListener('change', function (event) {
+            const color = event.target.value;
+
+            if (color && !backgroundColors[color]) {
+                alert(`color ${color} not exists`);
+                return;
+            }
+            const body = document.getElementsByTagName('body')[0];
+
+            body.classList = '';
+
+            if (!color) {
+                return;
+            }
+
+            body.classList.add(`${color}Bg`);
+        });
+        document.getElementById('meu_formulario')
+            .addEventListener("submit", (event) => {
+                event.preventDefault();
+                const data = new FormData(event.target);
+                console.log(Object.fromEntries(data.entries()));
+                return false;
+            });
+    </script>
+</body>
+
+</html>
