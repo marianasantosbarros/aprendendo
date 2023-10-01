@@ -1,3 +1,31 @@
 .oi1{
 background-color: aquamarine;
+padding: 70px;
+    margin: 10px;
+}
+.A1{
+    background-color: deeppink;
+    padding: 70px;
+    margin: 10px;
+
+}
+.A2{
+    background-color: cadetblue;
+    padding: 70px;
+    margin: 10px;
+}
+.A3{
+    background-color: cornflowerblue;
+    padding: 70px;
+    margin: 10px;
+}
+.A4{
+    background-color: aquamarine;
+    margin: 10px;
+    padding: 70px;
+}
+.A5{
+    background-color: peachpuff;
+    margin: 10px;
+    padding: 50px;
 }
