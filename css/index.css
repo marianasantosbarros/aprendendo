@@ -11,37 +11,34 @@ border: 2px dashed silver;
     background-color: darksalmon;
  color:palevioletred;
 }
+.All{
+background-color: wheat;
+}
 
 .morango {
     background-color: paleturquoise;
-    padding: 75px;
-    margin: 10px;
+
 }
 
 .morango2{
     background-color: deeppink;
-margin: 10px;
-padding: 70px;
+
 }
 .Capybara1{
     background-color: cadetblue;
-    margin: 10px;
-    padding: 70px;
+
 }
 .Capybara2{
     background-color: cornflowerblue;
-margin: 10px;
-padding: 70px;
+;
 }
 .Jambo{
     background-color: aquamarine;
-    margin: 10px;
-    padding: 70px;
+
 }
 .Astethic{
     background-color: peachpuff;
-    margin: 10px;
-    padding: 50px;
+
 }
 .Hackeado{
     background-color: red;
@@ -50,16 +47,28 @@ padding: 70px;
     }
 .Oi{
     background-color: darkcyan;
-    margin: 10px;
-    padding: 70px;
 }
 .A{
     background-color: aliceblue;
-    margin: 10px;
-    padding: 40px;
+
 }
 .Hie{
     background-color: palegoldenrod;
-    margin: 10px;
-    padding: 50px;
+
+}
+
+/* classe para as noticias */
+.espacamento {
+    padding: 2%;
+}
+.noticia {
+    width: 29.333%;
+    float: left;
+}
+.clear{
+    clear: both;
+}
+
+img {
+    width: 300px;
 }
